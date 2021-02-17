@@ -1,7 +1,8 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the Elastic License;
- * you may not use this file except in compliance with the Elastic License.
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0; you may not use this file except in compliance with the Elastic License
+ * 2.0.
  */
 
 import { useMemo } from 'react';
@@ -11,14 +12,19 @@ import { useUrlParams } from '../context/url_params_context/use_url_params';
 import { useApmServiceContext } from '../context/apm_service/use_apm_service_context';
 import { getLatencyChartSelector } from '../selectors/latency_chart_selectors';
 import { useTheme } from './use_theme';
-import { LatencyAggregationType } from '../../common/latency_aggregation_types';
 
 export function useTransactionLatencyChartsFetcher() {
   const { serviceName } = useParams<{ serviceName?: string }>();
   const { transactionType } = useApmServiceContext();
   const theme = useTheme();
   const {
-    urlParams: { start, end, transactionName, latencyAggregationType },
+    urlParams: {
+      environment,
+      start,
+      end,
+      transactionName,
+      latencyAggregationType,
+    },
     uiFilters,
   } = useUrlParams();
 
@@ -37,18 +43,20 @@ export function useTransactionLatencyChartsFetcher() {
           params: {
             path: { serviceName },
             query: {
+              environment,
               start,
               end,
               transactionType,
               transactionName,
               uiFilters: JSON.stringify(uiFilters),
-              latencyAggregationType: latencyAggregationType as LatencyAggregationType,
+              latencyAggregationType,
             },
           },
         });
       }
     },
     [
+      environment,
       serviceName,
       start,
       end,

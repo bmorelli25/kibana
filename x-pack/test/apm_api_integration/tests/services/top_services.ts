@@ -1,7 +1,8 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the Elastic License;
- * you may not use this file except in compliance with the Elastic License.
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0; you may not use this file except in compliance with the Elastic License
+ * 2.0.
  */
 
 import expect from '@kbn/expect';
@@ -345,8 +346,8 @@ export default function ApiTest({ getService }: FtrProviderContext) {
         let response: PromiseReturnType<typeof supertest.get>;
         before(async () => {
           response = await supertest.get(
-            `/api/apm/services?start=${start}&end=${end}&uiFilters=${encodeURIComponent(
-              `{"kuery":"service.name:opbeans-java","environment":"ENVIRONMENT_ALL"}`
+            `/api/apm/services?environment=ENVIRONMENT_ALL&start=${start}&end=${end}&uiFilters=${encodeURIComponent(
+              `{"kuery":"service.name:opbeans-java"}`
             )}`
           );
         });

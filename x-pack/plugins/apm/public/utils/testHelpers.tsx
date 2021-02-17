@@ -1,7 +1,8 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the Elastic License;
- * you may not use this file except in compliance with the Elastic License.
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0; you may not use this file except in compliance with the Elastic License
+ * 2.0.
  */
 
 /* global jest */
@@ -181,8 +182,8 @@ export async function inspectSearchParams(
         },
       }
     ) as APMConfig,
-    uiFilters: { environment: 'test' },
-    esFilter: [{ term: { 'service.environment': 'test' } }],
+    uiFilters: {},
+    esFilter: [],
     indices: {
       /* eslint-disable @typescript-eslint/naming-convention */
       'apm_oss.sourcemapIndices': 'myIndex',
