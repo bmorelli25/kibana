@@ -7248,7 +7248,7 @@
     "xpack.apm.tutorial.javaClient.startApplication.textPre": "添加 `-javaagent` 标志并使用系统属性配置代理。\n\n * 设置所需的服务名称（允许使用的字符：a-z、A-Z、0-9、-、_ 和空格）\n * 设置定制 APM Server URL（默认值：{customApmServerUrl}）\n * 设置 APM Server 机密令牌\n * 设置服务环境\n * 设置您的应用程序的基础软件包",
     "xpack.apm.tutorial.jsClient.enableRealUserMonitoring.textPre": "APM Server 默认禁用 RUM 支持。请参阅[文档]({documentationLink})以详细了解如何启用 RUM 支持。将 APM 集成用于 Fleet 时，会自动启用 RUM 支持。",
     "xpack.apm.tutorial.jsClient.installDependency.textPost": "框架集成（如 React 或 Angular）具有定制依赖项。请参阅[集成文档]({docLink})以了解详情。",
-    "xpack.apm.tutorial.nodeClient.configure.textPost": "请参阅[文档]({documentationLink})以了解高级用法，包括如何用于 [Babel/ES 模块]({babelEsModulesLink})。",
+    "xpack.apm.tutorial.nodeClient.configure.textPost": "请参阅[文档]({documentationLink})以了解高级用法，包括如何使用 [Babel/ES 模块]({babelEsModulesLink})。",
     "xpack.apm.tutorial.otel.configure.textPost": "有关配置选项和高级用法，请参阅[文档]({documentationLink})。\n\n",
     "xpack.apm.tutorial.otel.configureAgent.textPre": "在启动应用程序的过程中指定以下 OpenTelemetry 设置。请注意，除这些配置设置以外，OpenTelemetry SDK 还需要一些启动代码。有关更多详情，请参阅 [Elastic OpenTelemetry 文档]({openTelemetryDocumentationLink}) 和 [OpenTelemetry 社区检测指南]({openTelemetryInstrumentationLink})。",
     "xpack.apm.tutorial.otel.download.textPre": "请参阅 [OpenTelemetry 检测指南]({openTelemetryInstrumentationLink}) 下载适合您语言的 OpenTelemetry 代理或 SDK。",
